@@ -1,0 +1,10 @@
+# Ignore all files inside the logs directory
+logs/*
+
+# But do not ignore the .gitkeep file so the folder exists on GitHub
+!logs/.gitkeep
+
+# Ignore system temporary files or swap files
+*.swp
+*~
+.DS_Store
