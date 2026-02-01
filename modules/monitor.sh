@@ -38,3 +38,13 @@ memory_usage() {
 disk_usage() {
     df / | awk 'NR==2 {print $5}' | sed 's/%//'
 }
+
+
+
+# 2. Collect current metrics
+CPU=$(cpu_usage)
+MEM=$(memory_usage)
+DISK=$(disk_usage)
+
+# 3. Write metrics to log file
+echo "CPU: $CPU% | MEM: $MEM% | DISK: $DISK%" >> "$LOG_FILE"
