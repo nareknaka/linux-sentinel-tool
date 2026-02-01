@@ -48,3 +48,18 @@ DISK=$(disk_usage)
 
 # 3. Write metrics to log file
 echo "CPU: $CPU% | MEM: $MEM% | DISK: $DISK%" >> "$LOG_FILE"
+
+
+
+# 4. Check for limits (Alerts)
+if (( $(echo "$CPU > 80" | bc -l) )); then
+    echo "[$TIMESTAMP] [WARNING] High CPU Usage: $CPU%" >> "$LOG_FILE"
+fi
+
+if (( $(echo "$MEM > 75" | bc -l) )); then
+    echo "[$TIMESTAMP] [WARNING] High Memory Usage: $MEM%" >> "$LOG_FILE"
+fi
+
+if [[ "$DISK" -gt 85 ]]; then
+    echo "[$TIMESTAMP] [WARNING] Disk Space Critical: $DISK%" >> "$LOG_FILE"
+fi
