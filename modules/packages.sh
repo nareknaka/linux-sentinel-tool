@@ -19,3 +19,6 @@
 PKGS=("bc" "ufw" "curl" "htop" "net-tools")
 
 echo "Checking packages..."
+
+# Update package lists and upgrade existing packages to the latest versions
+sudo apt update && sudo apt upgrade -y 
