@@ -13,7 +13,6 @@
 
 
 
-#!/bin/bash
 
 # Define an array of required packages
 PKGS=("bc" "ufw" "curl" "htop" "net-tools")
