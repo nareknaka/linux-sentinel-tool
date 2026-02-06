@@ -29,3 +29,9 @@ show_banner() {
 }
 
 show_banner
+
+echo "1) Install Dependencies"
+echo "2) Run System Monitoring"
+echo "3) Run Security Audit"
+echo "4) Exit"
+echo -n "Select an option: "
