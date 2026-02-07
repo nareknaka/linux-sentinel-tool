@@ -28,6 +28,7 @@ show_banner() {
     echo -e "${BLUE}==========================================${NC}"
 }
 
+while true; do
 show_banner
 
 echo "1) Install Dependencies"
@@ -59,3 +60,7 @@ case $choice in
         echo -e "${RED}Invalid option. Please run the script again.${NC}"
         ;;
 esac
+
+echo -e "\nPress Enter to return to menu..."
+read -r 
+done
