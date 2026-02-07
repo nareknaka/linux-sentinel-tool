@@ -27,16 +27,18 @@ show_banner() {
     echo -e "${BLUE}       LINUX SENTINEL TOOL v1.0.0         ${NC}"
     echo -e "${BLUE}==========================================${NC}"
 }
-
+# Start an infinite loop to keep the menu running
 while true; do
-show_banner
+show_banner # Call baner function
 
+# Dispaly menu options to the user 
 echo "1) Install Dependencies"
 echo "2) Run System Monitoring"
 echo "3) Run Security Audit"
 echo "4) Exit"
 echo -n "Select an option: "
 
+# Read user input into the 'choice' variable
 read -r choice
 
 case $choice in
@@ -61,6 +63,7 @@ case $choice in
         ;;
 esac
 
+# Wait for the user to press Enter so the output doesn't disappear
 echo -e "\nPress Enter to return to menu..."
 read -r 
 done
