@@ -48,7 +48,7 @@ case $choice in
         bash ./modules/monitor.sh      
         ;;
     3)
-        echo -e "${GREEN}Running Securyty Audit...${NC}"
+        echo -e "${GREEN}Running Security Audit...${NC}"
         bash ./modules/security.sh
         ;;
     4)
@@ -56,6 +56,6 @@ case $choice in
         exit 0
         ;;
     *)
-        echo -e "${RED}Invalid option. Please rub the script again.${NC}"
+        echo -e "${RED}Invalid option. Please run the script again.${NC}"
         ;;
 esac
