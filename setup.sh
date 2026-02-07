@@ -35,3 +35,27 @@ echo "2) Run System Monitoring"
 echo "3) Run Security Audit"
 echo "4) Exit"
 echo -n "Select an option: "
+
+read -r choice
+
+case $choice in
+    1)
+        echo -e "${GREEN}Running Package Manager...${NC}"
+        bash ./modules/packages.sh
+        ;;
+    2) 
+        echo -e "${GREEN}Running System Monitor...${NC}"
+        bash ./modules/monitor.sh      
+        ;;
+    3)
+        echo -e "${GREEN}Running Securyty Audit...${NC}"
+        bash ./modules/security.sh
+        ;;
+    4)
+        echo -e "${RED}Exiting...Goodbye!${NC}"
+        exit 0
+        ;;
+    *)
+        echo -e "${RED}Invalid option. Please rub the script again.${NC}"
+        ;;
+esac
