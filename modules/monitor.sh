@@ -14,7 +14,7 @@
 
 
 # Define the path to the log file
-LOG_FILE="../logs/system_monitor.log"
+LOG_FILE="./logs/system_monitor.log"
 
 # Generate a current timestamp
 TIMESTAMP=$(TZ="Asia/Yerevan" date "+%Y-%m-%d %H:%M:%S")
