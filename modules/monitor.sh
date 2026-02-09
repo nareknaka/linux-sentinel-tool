@@ -60,6 +60,6 @@ if (( $(echo "$MEM > 75" | bc -l) )); then
     echo "[$TIMESTAMP] [WARNING] High Memory Usage: $MEM%" >> "$LOG_FILE"
 fi
 
-if [[ "$DISK" -gt 85 ]]; then
+if (( $(echo "$DISK > 85.0" | bc -l) )); then
     echo "[$TIMESTAMP] [WARNING] Disk Space Critical: $DISK%" >> "$LOG_FILE"
 fi
